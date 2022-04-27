@@ -7,10 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PlaceNotifier {
-    
-    
-    
+extension ViewController : PlaceNotifier
+{
     func showLoading() {
         
         //TODO: show loading implementation
@@ -35,9 +33,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("hide Loading")
     }
     
-    var presenter:PlacePresenter = PlacePresenter(placeService: PlaceService())
     
-    var tab: [PlaceModel] = []
+}
+
+extension ViewController : UITableViewDataSource, UITableViewDelegate
+{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tab.count
@@ -56,7 +56,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return placeCell
     }
     
+    
+}
 
+class ViewController: UIViewController  {
+    
+    var presenter:PlacePresenter = PlacePresenter(placeService: PlaceService())
+    
+    var tab: [PlaceModel] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -69,7 +76,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         self.presenter.placeNotifier = self
-        
+
         
         self.presenter.fetchAllPlaces()
         

@@ -7,6 +7,19 @@
 
 import Foundation
 
+extension PlacePresenter
+{
+    
+    func myTestExtension()
+    {
+        print("sssss")
+    }
+    
+    
+}
+
+
+
 
 protocol PlaceNotifier
 {
