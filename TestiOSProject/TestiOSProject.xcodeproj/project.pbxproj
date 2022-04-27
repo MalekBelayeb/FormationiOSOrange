@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07590EF62819484A00610016 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07590EF52819484A00610016 /* PlaceService.swift */; };
+		07590EF82819702C00610016 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07590EF72819702C00610016 /* Const.swift */; };
 		075952D42819388800E8A946 /* PlacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075952D32819388800E8A946 /* PlacePresenter.swift */; };
 		07898F8D2817E8FB00C3BB53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07898F8C2817E8FB00C3BB53 /* AppDelegate.swift */; };
 		07898F8F2817E8FB00C3BB53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07898F8E2817E8FB00C3BB53 /* SceneDelegate.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07590EF52819484A00610016 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		07590EF72819702C00610016 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		075952D32819388800E8A946 /* PlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePresenter.swift; sourceTree = "<group>"; };
 		07898F892817E8FB00C3BB53 /* TestiOSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestiOSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07898F8C2817E8FB00C3BB53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07590EF42819483600610016 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				07590EF52819484A00610016 /* PlaceService.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		075952D22819387600E8A946 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +72,7 @@
 		075952D5281945C900E8A946 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				07590EF42819483600610016 /* Remote */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 				07898FA82817FECC00C3BB53 /* PlaceTableViewCell.xib */,
 				07898FAF281810C300C3BB53 /* PlaceModel.swift */,
 				07898FB128181DFC00C3BB53 /* PlaceDetailViewController.swift */,
+				07590EF72819702C00610016 /* Const.swift */,
 			);
 			path = TestiOSProject;
 			sourceTree = "<group>";
@@ -177,10 +191,12 @@
 				07898FB0281810C300C3BB53 /* PlaceModel.swift in Sources */,
 				07898FB228181DFC00C3BB53 /* PlaceDetailViewController.swift in Sources */,
 				07898F972817E8FB00C3BB53 /* TestiOSProject.xcdatamodeld in Sources */,
+				07590EF62819484A00610016 /* PlaceService.swift in Sources */,
 				075952D42819388800E8A946 /* PlacePresenter.swift in Sources */,
 				07898F8D2817E8FB00C3BB53 /* AppDelegate.swift in Sources */,
 				07898F8F2817E8FB00C3BB53 /* SceneDelegate.swift in Sources */,
 				07898FA92817FECC00C3BB53 /* PlaceTableViewCell.swift in Sources */,
+				07590EF82819702C00610016 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

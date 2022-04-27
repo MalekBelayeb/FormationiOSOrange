@@ -15,15 +15,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //TODO: show loading implementation
         
-        print("loading ....")
+        print("show loading ....")
     }
     
     func getAllPlaces(listOfPlaces:[PlaceModel]) {
         
         //TODO: fetch all logic
         
-        print("get all places ", listOfPlaces.count)
-
+        print("in loading get all places ", listOfPlaces.count)
+        
+        self.tab = listOfPlaces
+        self.tableView.reloadData()
+        
         
     }
     
@@ -32,14 +35,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("hide Loading")
     }
     
-    // monta-omrani@live.fr
+    var presenter:PlacePresenter = PlacePresenter(placeService: PlaceService())
     
-    var presenter:PlacePresenter = PlacePresenter()
-    
-    var tab: [PlaceModel] = [PlaceModel(
-    title: "title1", category: "category1", distance: "distance1"),PlaceModel(
-    title: "title2", category: "category2", distance: "distance2"),PlaceModel(
-    title: "title3", category: "category3", distance: "distance3")]
+    var tab: [PlaceModel] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tab.count
@@ -50,9 +48,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let placeCell = tableView.dequeueReusableCell(withIdentifier: "PlaceTableViewCell", for: indexPath) as! PlaceTableViewCell
-        placeCell.titleLabel.text = self.tab[indexPath.row].title
-        placeCell.categoryLabel.text = self.tab[indexPath.row].category
-        placeCell.distanceLabel.text = self.tab[indexPath.row].distance
+        
+        placeCell.titleLabel.text = self.tab[indexPath.row].name
+        placeCell.categoryLabel.text = self.tab[indexPath.row].kinds
+        placeCell.distanceLabel.text = self.tab[indexPath.row].dist?.description
 
         return placeCell
     }
